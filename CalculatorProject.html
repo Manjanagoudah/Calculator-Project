@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        div{
+           border-collapse: collapse;
+            text-align: left;
+            background-color: rgb(226, 237, 234);
+            padding: 10px;
+            margin: auto;
+            height: 400px;
+            width: 400px;
+        }
+        
+        h2{
+            border-collapse: collapse;
+            text-align: center;
+            background-color: rgb(249, 249, 166);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: x-large;
+        }
+        h5{
+            font-size:small;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+         button{
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: 700;
+
+         }
+         input[type="text"]{
+            margin-right: 10px;
+            margin-left: 10px; 
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+         }
+         
+
+    </style>
+</head>
+<body>
+    <div>
+        <h2>CALCULATOR</h2>
+        <br>
+        <h5>
+        <label for="">Number 1</label>
+        <input type="text" id="input1" placeholder="Enter Number">
+        <button onclick="add()">+</button>
+        <button ondblclick="sub()">-</button>
+
+        <br>
+        <br>
+
+        <label for="">Number 2</label>
+        <input type="text" id="input2" placeholder="Enter Number">
+        <button onclick="divi()">/</button>
+        <button onclick="mul()">*</button>
+
+        <br>
+        <br>
+
+        <label for="">Result</label>
+        <input type="text" id="output" placeholder="Output">
+        <br>
+        <br>
+        <button onclick="clr()">clear</button>
+    </h5>
+ 
+    </div>
+
+    <script>
+
+        function add()
+        {
+        var x=document.getElementById("input1").value
+        var y=document.getElementById("input2").value
+        z=parseInt(x)+parseInt(y)
+        document.getElementById("output").value=z
+        
+        }
+
+        function sub()
+        {
+            var x=document.getElementById("input1").value
+        var y=document.getElementById("input2").value
+        z=parseInt(x)-parseInt(y)
+        document.getElementById("output").value=z
+        
+        }
+
+        function mul()
+        {
+        var x=document.getElementById("input1").value
+        var y=document.getElementById("input2").value
+        z=parseInt(x)*parseInt(y)
+        document.getElementById("output").value=z
+        
+        }
+
+        function divi()
+        {
+        var x=document.getElementById("input1").value
+        var y=document.getElementById("input2").value
+        z=parseInt(x)/parseInt(y)
+        document.getElementById("output").value=z
+        
+        }
+        function clr()
+        {
+         document.getElementById("input1").value=""
+         document.getElementById("input2").value=""
+         document.getElementById("output").value=""
+        
+        }
+
+        
+    </script>
+    
+</body>
+</html>
